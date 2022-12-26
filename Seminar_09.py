@@ -24,8 +24,8 @@ def random_number(message):
 # compress = False
 @bot.message_handler(content_types=['text'])
 def send_text(message):
-    if message.text == 'привет':
-        bot.send_message(message.chat.id, 'Привет, как дела?')
+    if message.text == 'привет': # если вводим "привет"
+        bot.send_message(message.chat.id, 'Привет, как дела?') # в ответ получим "Привет, как дела?"
     elif message.text == 'Рандомное число':
         bot.send_message(message.chat.id, str(random.randint(1, 10)))
     elif message.text == 'Сжать текст':
